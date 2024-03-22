@@ -58,18 +58,19 @@ const MyComponent = () => {
 
   return (
     <div data-theme='synthwave' className='w-full flex flex-col min-h-screen items-center justify-center'>
-        <div>
+        <div className="sm:w-48 sm:mx-auto">
           <Image
           src={imagePath}
           alt="Greeting Image"
           width={300}
           height={300}
+          className="w-full h-auto sm:max-w-full sm:h-auto"
           />
         </div>
-        <div className='text-center text-5xl font-bold'>
+        <div className='text-center text-5xl font-bold sm:text-5xl'>
         {greeting}
         </div>
-        <h1 className='text-center text-8xl font-bold'>{currentTime}</h1>
+        <h1 className='text-center text-5xl font-bold sm:text-8xl'>{currentTime}</h1>
         <form action="https://duckduckgo.com/" target="_blank" method="GET" className="flex search-bar items-center justify-center">
           <input data-theme='synthwave' className="flex search text-center input input-bordered input-accent w-full max-w-xs m-1" type="text" placeholder="Search Here" name="q" />
           <button className='btn btn-accent m-1' data-theme='synthwave'
